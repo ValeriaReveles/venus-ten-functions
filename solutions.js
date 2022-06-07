@@ -41,7 +41,7 @@
 // isTrue([1, 2])           // false
 //
 
-function isTrue (input){
+function isTrue(input){
     let userInput = input === true;
     return userInput;
 }
@@ -58,7 +58,7 @@ function isTrue (input){
 // isFalse([1, 2])            // false
 //
 
-function isFalse (value) {
+function isFalse(value) {
     let userOutput = value === false;
     return userOutput;
 }
@@ -79,7 +79,7 @@ function isFalse (value) {
 // not(123)                    // false
 //
 
-function not (userInput) {
+function not(userInput) {
     return !userInput;
 }
 
@@ -101,8 +101,14 @@ function not (userInput) {
 //
 //
 
-function addOne (Number){
-    return Number + 1;
+function addOne(input){
+    if(input == Infinity){
+        return Infinity;
+    }else{
+        input = parseInt(input) + 1;
+        return input;
+    }
+    //return Number + 1;
 }
 //need extra help with the NaN return and string values
 
@@ -119,11 +125,14 @@ function addOne (Number){
 // isEven("banana")            // false
 //
 
-function isEven (number){
-    if (number % 2 === 0){ //
-        return true;
-    }
-    return false;
+function isEven(number){
+        return (number % 2 === 0);//passed all exams. Review further
+
+    // if (number % 2 === 0){ //
+    //     return true;
+    // }else{
+    //     return false;
+    // }
 }
 
 // 6. Define a function named `isIdentical` that takes in two input arguments. If each input is equal both in data type and in value, then return `true`. If the values are not the same data type or not the same value, return `false`.
@@ -137,11 +146,12 @@ function isEven (number){
 // isIdentical("javascript", "java")     // false
 //
 
-function isIdentical (x, y){
+function isIdentical(x, y){
     if (x === y){
         return true;
+        // return false;
     }else {
-        return false;
+         return false;
     }
 }
 
@@ -154,9 +164,13 @@ function isIdentical (x, y){
 // isEqual(4, -5)                        // false
 // isEqual("java", "javascript")         // false
 //
-
-
-
+function isEqual(inputOne, inputTwo) {
+    if (inputOne == inputTwo){
+    return true;
+}else {
+        return false;
+    }
+}
 
 // 8. Define a function named `or` that takes in two input arguments. The output returned should be the result of an `or` operation on both inputs.
 //
@@ -168,6 +182,12 @@ function isIdentical (x, y){
 //
 //
 //
+function or(one, two){
+    return one || two;
+
+}
+
+
 // 9. Define a function named `and` that takes in two input arguments and returns the result of a logical `and` operation of both inputs.
 //
 // and(true, true)                    // true
@@ -177,6 +197,12 @@ function isIdentical (x, y){
 // and("hello", "world")              // "world" (this behavior is non-obvious, research more)
 //
 //
+
+function and(argOne, argTwo){
+    return argOne && argTwo;
+
+}
+
 // 10. Define a function named `concat` that takes in two input arguments. If both arguments are strings, then return the concatenated result. If two numbers are provided, then return the string concatenation of each set of numerals.
 //
 // concat("code", "up")                // "codeup"
@@ -185,6 +211,16 @@ function isIdentical (x, y){
 // concat(4, 2)                        // "42"
 // concat(true, true)                  // "truetrue"
 //
+function concat(a, b){
+    return a.toString() + b.toString();
+
+}
+
+
+
+
+
+
 // ## Hints
 //
 // Consider this example problem.
