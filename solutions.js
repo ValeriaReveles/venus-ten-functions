@@ -126,7 +126,7 @@ function addOne(input){
 //
 
 function isEven(number){
-        return (number % 2 === 0);//passed all exams. Review further
+        return (number % 2 === 0);//passed all exams. Review furthergit
 
     // if (number % 2 === 0){ //
     //     return true;
